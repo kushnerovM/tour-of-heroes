@@ -5,6 +5,14 @@
       <label for="hero-name">Hero name: </label>
       <input id="hero-name" [(ngModel)]="hero.name" placeholder="name">
     </div>
+    <div>
+      <label for="hero-class">Hero class: </label>
+      <input id="hero-class" [(ngModel)]="hero.class" placeholder="class">
+    </div>
+    <div>
+      <label for="hero-level">Hero level: </label>
+      <input id="hero-level" [(ngModel)]="hero.level" placeholder="level">
+    </div>
 </div>
 <button type="button" (click)="goBack()">go back</button>
 <button type="button" (click)="save()">save</button>
