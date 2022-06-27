@@ -6,11 +6,11 @@ import { Location } from '@angular/common';
 import { HeroService } from '../hero.service';
 
 @Component({
-  selector: 'app-hero-detail',
-  templateUrl: './hero-detail.component.html',
-  styleUrls: ['./hero-detail.component.css']
+  selector: 'app-hero-interaction',
+  templateUrl: './hero-interaction.component.html',
+  styleUrls: ['./hero-interaction.component.css']
 })
-export class HeroDetailComponent implements OnInit {
+export class HeroInteractionComponent implements OnInit {
 
   constructor(
     private route: ActivatedRoute,
