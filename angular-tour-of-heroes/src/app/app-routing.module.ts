@@ -9,7 +9,10 @@ const routes: Routes = [
   {path:'heroes',component:HeroesComponent},
   {path:'dashboard',component:DashboardComponent},
   {path:'',redirectTo:'/dashboard',pathMatch:'full'},
-  {path:'detail/:id',component:HeroInteractionComponent}
+  {path:'hero', children:[
+    {path:'detail/:id',component:HeroInteractionComponent},
+    {path:'new',component:HeroInteractionComponent}
+  ]}
 ];
 
 @NgModule({

@@ -14,5 +14,8 @@
       <input id="hero-level" [(ngModel)]="hero.level" placeholder="level">
     </div>
 </div>
+<div *ngIf="!hero">
+  new hero adding UI
+</div>
 <button type="button" (click)="goBack()">go back</button>
 <button type="button" (click)="save()">save</button>
