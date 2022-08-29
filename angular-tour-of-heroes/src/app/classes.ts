@@ -1,0 +1,1 @@
+export const CLASSES : String[]  = ['hunter','paladin','mage','warrior','priest'];

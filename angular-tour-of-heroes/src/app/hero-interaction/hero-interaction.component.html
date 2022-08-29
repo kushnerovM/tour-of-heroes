@@ -3,19 +3,22 @@
     <div>id: {{hero.id}}</div>
     <div>
       <label for="hero-name">Hero name: </label>
-      <input id="hero-name" [(ngModel)]="hero.name" placeholder="name">
+      <input id="hero-name" [(ngModel)]="hero.name" placeholder="name" #heroName>
     </div>
     <div>
       <label for="hero-class">Hero class: </label>
-      <input id="hero-class" [(ngModel)]="hero.class" placeholder="class">
+     <select id="class" [(ngModel)]="hero.class" #heroClass>
+      <option *ngFor="let class of classes" [value]="class">{{class}}</option>
+     </select>
     </div>
     <div>
       <label for="hero-level">Hero level: </label>
-      <input id="hero-level" [(ngModel)]="hero.level" placeholder="level">
+      <input id="hero-level" [(ngModel)]="hero.level" placeholder="level" #heroLevel>
     </div>
+    <button type="button" class="add-button" (click)="add(heroName.value,heroClass.value,heroLevel.value)">Add</button>
 </div>
 <div *ngIf="!hero">
   new hero adding UI
 </div>
 <button type="button" (click)="goBack()">go back</button>
-<button type="button" (click)="save()">save</button>
+<button type="button" (click)="save()">update</button>
