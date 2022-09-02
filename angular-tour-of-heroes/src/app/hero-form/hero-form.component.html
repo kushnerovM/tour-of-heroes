@@ -1,17 +1,15 @@
-<form>
-    <div>id: </div>
+    <div>id: {{hero.id}} </div>
     <div>
       <label for="hero-name">Hero name: </label>
-      <input id="hero-name" placeholder="name">
+      <input id="hero-name" placeholder="name" [(ngModel)]="hero.name">
     </div>
     <div>
       <label for="hero-class">Hero class: </label>
-      <input id="hero-class" placeholder="class">
+      <input id="hero-class" placeholder="class" [(ngModel)]="hero.class">
     </div>
     <div>
       <label for="hero-level">Hero level: </label>
-      <input id="hero-level" placeholder="level">
+      <input id="hero-level" placeholder="level" [(ngModel)]="hero.level">
     </div>
     <button type="button">go back</button>
     <button type="button">save</button>
-</form>
