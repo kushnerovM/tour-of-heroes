@@ -4,12 +4,14 @@
       <input id="hero-name" placeholder="name" [(ngModel)]="hero.name">
     </div>
     <div>
-      <label for="hero-class">Hero class: </label>
-      <input id="hero-class" placeholder="class" [(ngModel)]="hero.class">
+      <label for="hero-class">Hero level: </label>
+      <input id="hero-class" placeholder="class" [(ngModel)]="hero.level">
     </div>
     <div>
-      <label for="hero-level">Hero level: </label>
-      <input id="hero-level" placeholder="level" [(ngModel)]="hero.level">
+      <label for="hero-level">Hero class: </label>
+      <select name="" id="hero-level" [(ngModel)]="hero.class">
+        <option *ngFor="let class of classes" [value]="class">{{class}}</option>
+      </select>
     </div>
     <button type="button">go back</button>
     <button type="button">save</button>

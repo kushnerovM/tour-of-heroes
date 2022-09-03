@@ -1,0 +1,1 @@
+export const CLASSES : string[]  = ['Priest','Hunter','Mage','Warrior'];
